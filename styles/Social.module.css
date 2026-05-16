@@ -1,0 +1,117 @@
+.social {
+  padding: var(--section-pad);
+  background: var(--cream);
+}
+
+.socialHeader {
+  max-width: var(--max-width);
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.socialDesc {
+  font-size: 0.9rem;
+  color: var(--warm-gray);
+  max-width: 460px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.socialGrid {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.socialCard {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--charcoal);
+  transition: all 0.35s ease;
+  background: var(--cream);
+  position: relative;
+  overflow: hidden;
+}
+
+.socialCard::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--charcoal);
+  transform: translateX(-100%);
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.socialCard:hover::before {
+  transform: translateX(0);
+}
+
+.socialCard:hover {
+  color: var(--cream);
+  border-color: var(--charcoal);
+}
+
+.socialCard:hover .socialIcon {
+  color: var(--cream) !important;
+}
+
+.socialCard:hover .socialHandle {
+  color: var(--warm-gray);
+}
+
+.socialIcon {
+  font-size: 1.8rem;
+  position: relative;
+  z-index: 1;
+  transition: color 0.35s ease;
+  flex-shrink: 0;
+}
+
+.instagram { color: #E1306C; }
+.tiktok { color: #010101; }
+.facebook { color: #1877F2; }
+.youtube { color: #FF0000; }
+
+.socialInfo {
+  position: relative;
+  z-index: 1;
+}
+
+.socialName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.socialHandle {
+  font-size: 0.75rem;
+  color: var(--warm-gray);
+  transition: color 0.35s ease;
+}
+
+.socialArrow {
+  margin-left: auto;
+  position: relative;
+  z-index: 1;
+  font-size: 0.8rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.socialCard:hover .socialArrow {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  .socialGrid { grid-template-columns: 1fr; }
+  .social { padding: 5rem 1.5rem; }
+}

@@ -1,0 +1,142 @@
+.contact {
+  padding: var(--section-pad);
+  background: var(--cream-dark);
+}
+
+.contactInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.contactContent {
+  /* container */
+}
+
+.contactText {
+  font-size: 0.95rem;
+  color: var(--charcoal-light);
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.contactItem:first-of-type {
+  border-top: 1px solid var(--border);
+}
+
+.contactItemIcon {
+  width: 44px;
+  height: 44px;
+  background: var(--charcoal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.contactItemLabel {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-bottom: 0.2rem;
+}
+
+.contactItemValue {
+  font-size: 0.9rem;
+  color: var(--charcoal);
+}
+
+.contactItemValue a {
+  color: var(--accent);
+  transition: opacity 0.2s ease;
+}
+
+.contactItemValue a:hover {
+  opacity: 0.7;
+}
+
+.contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  margin-bottom: 0.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.formGroup label {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+}
+
+.formGroup input,
+.formGroup textarea {
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border);
+  background: var(--cream);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--charcoal);
+  outline: none;
+  transition: border-color 0.25s ease;
+  resize: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: var(--accent);
+}
+
+.formGroup input::placeholder,
+.formGroup textarea::placeholder {
+  color: var(--warm-gray);
+  opacity: 0.6;
+}
+
+.formGroup textarea {
+  min-height: 130px;
+}
+
+.formSubmit {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+  .contactInner {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .contact { padding: 5rem 1.5rem; }
+}

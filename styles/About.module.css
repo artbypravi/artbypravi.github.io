@@ -1,0 +1,133 @@
+.about {
+  padding: var(--section-pad);
+  background: var(--cream);
+}
+
+.aboutInner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.aboutContent {
+  /* container */
+}
+
+.aboutText {
+  color: var(--charcoal-light);
+  font-size: 0.95rem;
+  line-height: 1.9;
+  margin-bottom: 2.5rem;
+}
+
+.aboutList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.aboutList li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.9rem;
+  color: var(--charcoal-light);
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.aboutList li:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.aboutList li i {
+  color: var(--accent);
+  width: 18px;
+  text-align: center;
+  font-size: 0.8rem;
+  flex-shrink: 0;
+}
+
+.aboutVisual {
+  position: relative;
+  padding-bottom: 3rem;
+}
+
+.aboutImgMain {
+  width: 100%;
+  aspect-ratio: 3/4;
+  background: var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--warm-gray);
+  border: 1px solid var(--border);
+}
+
+.aboutImgAccent {
+  position: absolute;
+  bottom: 0;
+  left: -2rem;
+  width: 55%;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.aboutImgAccentText {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--white);
+  text-align: center;
+  line-height: 1.5;
+}
+
+.aboutStats {
+  position: absolute;
+  top: 2rem;
+  right: -1.5rem;
+  background: var(--charcoal);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.aboutStatsNum {
+  font-family: var(--font-display);
+  font-size: 2.8rem;
+  font-weight: 300;
+  color: var(--cream);
+  line-height: 1;
+}
+
+.aboutStatsLabel {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--warm-gray);
+  margin-top: 0.3rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .aboutInner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .aboutVisual {
+    margin-top: 1rem;
+  }
+  .about {
+    padding: 5rem 1.5rem;
+  }
+  .aboutStats {
+    right: 0;
+  }
+}
